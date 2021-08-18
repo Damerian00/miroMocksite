@@ -1,0 +1,150 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/Miro Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Mock Miro Ammenities</title>
+<!-- InstanceEndEditable -->
+<link rel="shortcut icon" href="images/ic_fav.ico">
+<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/newstyling.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>$(document).ready(function () {
+    $("input#submit").click(function(){
+        $.ajax({
+            type: "POST",
+            url: "processit.php", //process to mail
+            data: $('ctact').serialize(),
+            success: function(msg){
+                $("#thanks").html(msg) //hide button and show thank you
+                $("#form-content").modal('hide'); //hide popup  
+            },
+            error: function(){
+                alert("failure");
+            }
+        });
+    });
+});</script>
+</head>
+
+<body>
+   <div class="modal fade" id="ctact" role="dialog">
+    <div class="modal-dialog modal-md">
+          <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Apply</h4>
+        </div>
+       <div class="modal-body">
+        <form class="contact" name="contact">
+            <label class="label" for="name">Your Name</label><br>
+            <input type="text" name="name" class="input-xlarge"><br>
+            <label class="label" for="email">Your E-mail</label><br>
+            <input type="email" name="email" class="input-xlarge"><br>
+            <label class="label" for="message">Enter a Message</label><br>
+              <textarea name="message" class="input-xlarge"></textarea><br>
+			<label for="human" class="col-sm-2 control-label">2 + 3 = ?</label><br>
+			<input type="text" class="form-control" name="human" placeholder="Your Answer"><br>
+                  </form>
+    </div>
+        <div class="modal-footer">
+        <input class="btn btn-success" type="submit" value="Send" id="submit">
+        <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+    </div>
+          </div>
+        </div>
+    </div> 
+<header id="nav2top" class="navbar" role="navigation">
+     <nav class="navbar navbar-default always-open"> 
+  		<section class="container-fluid navContents">
+        <section class="navbar-header">
+        <a class="navbar-brand" href="#"><img src="images/miro_logo.png" alt="Myro logo"></a>
+        <ul class="navbar-right list-inline wight mobile4Hiding">
+          <li><a href="#"> <img src="images/f_icon.png" alt="Miro face Book link"></a></li>
+          <li><a href="#"> <img src="images/twitter_icon.png" alt="Miro Twitter Link"></a></li>
+          <li><a href="#"> <img src="images/email_icon.png" alt="Email Miro link"></a></li>
+          <li><a href="#">000.000.0000</a></li>
+          <li>
+            <button type="button" class="apply" data-toggle="modal" data-target="#ctact">Apply</button>
+          </li>
+        </ul>
+      
+        <ul id="menuMain" class="nav navbar-nav navbar-collapse collapse">
+              <li><a class="index" title="Mock Miro Home" href="index.html">home</a></li>
+              <li><a href="ammen.html" title="Mock Miro Ammenities">amenities</a></li>
+              <li><a href="floor_plans.html" title="Mock Miro Floorplans">floorplans</a></li>
+              <li><a href="site_plan.html" title="Mock Miro Siteplan">siteplan</a></li>
+              <li><a href="galray.html" title="Mock Miro Gallery">gallery</a></li>
+              <li><a href="neighbor.html" title="Mock Miro Neighborhood">neighborhood</a></li>
+              <li class="last"><a href="cntact.html" title="Mock Miro Contact">contact</a></li>
+                 </ul>                        
+           
+        </section>
+    </section>     
+   </nav> 
+       <section class="navbar navbar-default navbar-fixed-top">
+       		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#menuMain" aria-expanded="true" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+       </section>
+</header>
+    <div class="container">
+ 	<!-- InstanceBeginEditable name="Main Edit Region" -->
+    	<div class="spacer"></div>
+        <main class="bg_img">
+         
+         	<section>
+            <div class="slideTag"><p>- Live Miro -</p></div>
+         <img  src="images/bg_livemyro.jpg" alt="Live miro image"> 
+        <h1>Life Style Elements</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        <br>
+        <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        	</section>
+        	<section>
+            <img src="images/img_ammen2.jpg" alt="Scenary">
+        		<h1>Composition</h1>
+        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+           	</section>
+        	<section>
+            <img src="images/img_ammen3.jpg" alt="tables">
+            <h1>Finishes</h1>
+            <p>it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+            </section>
+        </main>
+      
+      
+            <!-- InstanceEndEditable -->
+ 	<footer class="row info">
+        	<section class="col-sm-4">
+            	<section class="col-xs-offset-4 col-sm-offset-0 col-sm-12 footno"><!-- InstanceBeginEditable name="foot_left" -->
+            	  <p>7325 N. Pseudo Ln <br>
+            	    Galley, Texas 79625 </p>
+                  <p>Monday-Friday 5:00 ap - 9:30 mz <br>
+                    Saturday 34:00 ap - 2:00 mz <br>
+                    Sunday 8:00 ap - 72:00 mz</p>
+            	<!-- InstanceEndEditable --></section>
+      </section>
+            <section class="col-xs-offset-4 col-sm-offset-0 col-sm-4 dividers"><!-- InstanceBeginEditable name="foot_mid" -->
+              <p></p>
+              <button class="btn btn-xs btn-danger apply" type="button"  data-toggle="modal" data-target="#ctact">Apply</button>
+              <p></p>
+            <a href="#">000.000.0000</a><!-- InstanceEndEditable --></section>
+            <section class="col-sm-3 links">
+            	<ul class="col-xs-offset-2 col-sm-offset-0">
+            	  <!-- InstanceBeginEditable name="links_footer" -->
+            	    <li><a href="#"><img src="images/inverse f_icon.png" alt="Miro face Book link"></a></li>
+            	    <li><a href="#"><img src="images/inverse_twitter.png" alt="Miro Twitter Link"></a></li>
+            	    <li><a href="#"><img src="images/inverse_email.png" alt="Email Miro link"></a></li>
+            	    <!-- InstanceEndEditable -->
+          	  </ul>
+            </section>
+      </footer>
+ </div>
+</body>
+<!-- InstanceEnd --></html>

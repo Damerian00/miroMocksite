@@ -1,0 +1,202 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/Miro Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Mock Miro Gallery</title>
+<!-- InstanceEndEditable -->
+<link rel="shortcut icon" href="images/ic_fav.ico">
+<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/newstyling.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>$(document).ready(function () {
+    $("input#submit").click(function(){
+        $.ajax({
+            type: "POST",
+            url: "processit.php", //process to mail
+            data: $('ctact').serialize(),
+            success: function(msg){
+                $("#thanks").html(msg) //hide button and show thank you
+                $("#form-content").modal('hide'); //hide popup  
+            },
+            error: function(){
+                alert("failure");
+            }
+        });
+    });
+});</script>
+</head>
+
+<body>
+   <div class="modal fade" id="ctact" role="dialog">
+    <div class="modal-dialog modal-md">
+          <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Apply</h4>
+        </div>
+       <div class="modal-body">
+        <form class="contact" name="contact">
+            <label class="label" for="name">Your Name</label><br>
+            <input type="text" name="name" class="input-xlarge"><br>
+            <label class="label" for="email">Your E-mail</label><br>
+            <input type="email" name="email" class="input-xlarge"><br>
+            <label class="label" for="message">Enter a Message</label><br>
+              <textarea name="message" class="input-xlarge"></textarea><br>
+			<label for="human" class="col-sm-2 control-label">2 + 3 = ?</label><br>
+			<input type="text" class="form-control" name="human" placeholder="Your Answer"><br>
+                  </form>
+    </div>
+        <div class="modal-footer">
+        <input class="btn btn-success" type="submit" value="Send" id="submit">
+        <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+    </div>
+          </div>
+        </div>
+    </div> 
+<header id="nav2top" class="navbar" role="navigation">
+     <nav class="navbar navbar-default always-open"> 
+  		<section class="container-fluid navContents">
+        <section class="navbar-header">
+        <a class="navbar-brand" href="#"><img src="images/miro_logo.png" alt="Myro logo"></a>
+        <ul class="navbar-right list-inline wight mobile4Hiding">
+          <li><a href="#"> <img src="images/f_icon.png" alt="Miro face Book link"></a></li>
+          <li><a href="#"> <img src="images/twitter_icon.png" alt="Miro Twitter Link"></a></li>
+          <li><a href="#"> <img src="images/email_icon.png" alt="Email Miro link"></a></li>
+          <li><a href="#">000.000.0000</a></li>
+          <li>
+            <button type="button" class="apply" data-toggle="modal" data-target="#ctact">Apply</button>
+          </li>
+        </ul>
+      
+        <ul id="menuMain" class="nav navbar-nav navbar-collapse collapse">
+              <li><a class="index" title="Mock Miro Home" href="index.html">home</a></li>
+              <li><a href="ammen.html" title="Mock Miro Ammenities">amenities</a></li>
+              <li><a href="floor_plans.html" title="Mock Miro Floorplans">floorplans</a></li>
+              <li><a href="site_plan.html" title="Mock Miro Siteplan">siteplan</a></li>
+              <li><a href="galray.html" title="Mock Miro Gallery">gallery</a></li>
+              <li><a href="neighbor.html" title="Mock Miro Neighborhood">neighborhood</a></li>
+              <li class="last"><a href="cntact.html" title="Mock Miro Contact">contact</a></li>
+                 </ul>                        
+           
+        </section>
+    </section>     
+   </nav> 
+       <section class="navbar navbar-default navbar-fixed-top">
+       		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#menuMain" aria-expanded="true" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+       </section>
+</header>
+    <div class="container">
+ 	<!-- InstanceBeginEditable name="Main Edit Region" -->
+  <div class="spacer"></div>
+    <main >
+  
+    <script src="js/myro.js"></script> 
+  
+      
+    <div class="container gal">
+    	<div class="carousel-slide" id="gal-slide" data-ride="carousel" data-interval="false">
+        	<div class="carousel-inner">
+            	<div class="item active">
+                	<img src="images/snatch/open1.jpg">
+                </div>
+                <div class="item">
+                	<img src="images/snatch/open3.jpg">
+                </div>
+                 <div class="item">
+                	<img src="images/snatch/table.jpg">
+                </div>
+                 <div class="item">
+                	<img src="images/snatch/apool2.jpg">
+                </div>
+                 <div class="item">
+                	<img src="images/snatch/waver.jpg">
+                </div>
+                <div class="item">
+                	<img src="images/snatch/open2.jpg">
+                </div>
+                 <div class="item">
+                	<img src="images/snatch/pool1.jpg">
+                </div>
+                 <div class="item">
+                	<img src="images/snatch/excz1.jpg">
+                </div>
+            </div>
+          <div class="row">
+         	<div class="col-xs-2 col-sm-3">
+            	<a class="s0" href="#gal-slide"><img src="images/snatch/open1.jpg">
+                </a>
+            </div>
+            <div class="col-xs-2 col-sm-3">
+            	<a class="s1" href="#gal-slide"><img src="images/snatch/open3.jpg">
+                </a>
+            </div>
+            <div class="col-xs-2 col-sm-3">
+            	<a class="s2" href="#gal-slide"><img src="images/snatch/table.jpg">
+                </a>
+            </div>
+            <div class="col-xs-2 col-sm-3">
+            	<a class="s3" href="#gal-slide"><img src="images/snatch/apool2.jpg">
+                </a>
+            </div>
+         </div>  
+         <div class="row">
+         	<div class="col-xs-2 col-sm-3">
+            	<a class="s4" href="#gal-slide"><img src="images/snatch/waver.jpg">
+                </a>
+            </div>
+            <div class="col-xs-2 col-sm-3">
+            	<a class="s5" href="#gal-slide"><img src="images/snatch/open2.jpg">
+                </a>
+            </div>
+            <div class="col-xs-2 col-sm-3">
+            	<a class="s6" href="#gal-slide"><img src="images/snatch/pool1.jpg">
+                </a>
+            </div>
+            <div class="col-xs-2 col-sm-3">
+            	<a class="s7" href="#gal-slide"><img src="images/snatch/excz1.jpg">
+                </a>
+            </div>
+         </div>
+         </div>
+         </div>      
+        </main>
+       
+
+       
+            <!-- InstanceEndEditable -->
+ 	<footer class="row info">
+        	<section class="col-sm-4">
+            	<section class="col-xs-offset-4 col-sm-offset-0 col-sm-12 footno"><!-- InstanceBeginEditable name="foot_left" -->
+            	  <p>7325 N. Pseudo Ln <br>
+            	    Galley, Texas 79625 </p>
+                  <p>Monday-Friday 5:00 ap - 9:30 mz <br>
+                    Saturday 34:00 ap - 2:00 mz <br>
+                    Sunday 8:00 ap - 72:00 mz</p>
+            	<!-- InstanceEndEditable --></section>
+      </section>
+            <section class="col-xs-offset-4 col-sm-offset-0 col-sm-4 dividers"><!-- InstanceBeginEditable name="foot_mid" -->
+              <p></p>
+              <button class="btn btn-xs btn-danger apply" type="button"  data-toggle="modal" data-target="#ctact">Apply</button>
+              <p></p>
+            <a href="#">000.000.0000</a><!-- InstanceEndEditable --></section>
+            <section class="col-sm-3 links">
+            	<ul class="col-xs-offset-2 col-sm-offset-0">
+            	  <!-- InstanceBeginEditable name="links_footer" -->
+            	    <li><a href="#"><img src="images/inverse f_icon.png" alt="Miro face Book link"></a></li>
+            	    <li><a href="#"><img src="images/inverse_twitter.png" alt="Miro Twitter Link"></a></li>
+            	    <li><a href="#"><img src="images/inverse_email.png" alt="Email Miro link"></a></li>
+            	    <!-- InstanceEndEditable -->
+          	  </ul>
+            </section>
+      </footer>
+ </div>
+</body>
+<!-- InstanceEnd --></html>
